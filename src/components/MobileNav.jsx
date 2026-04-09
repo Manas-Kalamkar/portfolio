@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from "react";
-import useLenis from './lenis';
+import useLenis from '../../public/assets/data/lenis';
+import { NavData } from "../../public/assets/data/NavData";
+import { HashLink } from "react-router-hash-link";
 
-
-export default function MobileNav({ isOpen, setIsOpen }) {
+export default function MobileNav({ isOpen, setIsOpen,activeSection }) {
   const lenis = useRef(useLenis());
   // disable body scroll when open
   useEffect(() => {
@@ -24,17 +25,23 @@ export default function MobileNav({ isOpen, setIsOpen }) {
         >
 
           <nav className="">
-            
-            
-            <ul className="flex flex-col justify-center items-center space-y-8 h-screen">
-              <li className="text-5xl text-white cursor-pointer font-bold" onClick={()=>setIsOpen(false)}><a href="#home">Home</a></li>
-              <li className="text-5xl text-white cursor-pointer font-bold" onClick={()=>setIsOpen(false)}><a href="#about">About</a></li>
-              <li className="text-5xl text-white cursor-pointer font-bold" onClick={()=>setIsOpen(false)}><a href="#projects">Projects</a> </li>
-              <li className="text-5xl text-white cursor-pointer font-bold" onClick={()=>setIsOpen(false)}><a href="#contact">Contact</a></li>
 
+
+            <ul className="flex flex-col justify-center items-center space-y-8 h-screen">
+              {NavData.map((item, index) => {
+                return (
+                  <li className='cursor-pointer font-bold' key={index}>
+                    <HashLink to={item.path}
+                      smooth
+                    >
+                      <span onClick={() => setIsOpen(false)} className={activeSection.toUpperCase() == item.title.toUpperCase() ? "text-(--green) text-4xl" : "text-gray-200 text-3xl"}>{item.title}</span>
+                    </HashLink>
+                  </li>
+                )
+              })}
             </ul>
           </nav>
-=
+          =
 
         </div>
       )}
