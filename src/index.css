@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root{
+  --green:#5EDC1F;
+  margin:0;
+  padding:0;
+}
+
+
+html.lenis,
+html.lenis body {
+  height: auto;
+
+}
+
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: clip;
+}
+
+.lenis [data-lenis-prevent],
+.lenis [data-lenis-prevent-wheel],
+.lenis [data-lenis-prevent-touch] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+.lenis.lenis-autoToggle {
+  transition-property: overflow;
+  transition-duration: 1ms;
+  transition-behavior: allow-discrete;
+}
+
+form{
+  display:flex;
+  justify-content:center;
+}
+
+label,#submit{
+  font-size:1.4rem;
+  font-weight:600
+}
+
+
+input,textarea{
+  width:100%;
+  padding:10px ;
+  font-size:1.3rem;
+  font-weight:500;
+  background-color:gray;
+  border-radius:0.2rem;
+  color:var(--green);
+  margin:auto;
+
+}
+
+input,textarea::placeholder{
+  font-style: italic;
+  
+}
+
+
+label{
+  display:flex;
+
+}
+
+@media(min-width:500px){
+  input,textarea{width:400px;}
+}
+@media(min-width:700px){
+  input,textarea{width:600px;}
+}
+@media(min-width:1080px){
+  input,textarea{width:700px;}
+}
