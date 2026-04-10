@@ -66,9 +66,9 @@ const Header = () => {
             <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} activeSection={activeSection} />
             {/* 3 bars icon */}
             <div className="space-y-1 lg:hidden">
-              <span className={`block w-6 h-0.5 ${!isDark ? 'bg-white' : 'bg-gray-800'} `}></span>
-              <span className={`block w-6 h-0.5 ${!isDark ? 'bg-white' : 'bg-gray-800'} `}></span>
-              <span className={`block w-6 h-0.5 ${!isDark ? 'bg-white' : 'bg-gray-800'} `}></span>
+              <span className={`block w-6 h-0.5 ${isDark ? 'bg-white' : 'bg-gray-800'} `}></span>
+              <span className={`block w-6 h-0.5 ${isDark ? 'bg-white' : 'bg-gray-800'} `}></span>
+              <span className={`block w-6 h-0.5 ${isDark ? 'bg-white' : 'bg-gray-800'} `}></span>
             </div>
           </button>
           <div className=' hidden lg:grid '>
