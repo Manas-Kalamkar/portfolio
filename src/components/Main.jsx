@@ -4,16 +4,17 @@ import Projects from './Projects';
 import About from './About';
 import Contact from './Contact';
 import Footer from './Footer';
+import WorkStation from './WorkStation';
+import Certificates from './Certificates';
 
 const Main = () => {
     
   return (
-    <div className='w-full h-full bg-gray-200'>
+    <div className='w-full h-full '>
       <Hero />
       <About />
       <Projects />
       <Contact />
-      <Footer />
     </div>
   )
 }

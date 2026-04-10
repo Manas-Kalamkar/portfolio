@@ -1,11 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
-import { projects } from "../../public/assets/data/projects";
+import { certificates } from "../../public/assets/data/certificates";
 import useLenis from "../../public/assets/data/lenis";
 import { FaChevronLeft } from "react-icons/fa6";
 import { FaChevronRight } from "react-icons/fa6";
-import WorkStation from "./WorkStation";
 
-const Projects = () => {
+const Certificates = () => {
 
   const lenis = useLenis();
   const containerRef = useRef(null);
@@ -13,9 +12,9 @@ const Projects = () => {
   const isInteractingRef = useRef(false);
   const autoScrollInterval = useRef(null);
 
+
   const FRICTION = 0.92;
   const MIN_VELOCITY = 0.02;
-
 
   // -----------------------------
   // SMOOTH VELOCITY SCROLL LOOP
@@ -24,7 +23,7 @@ const Projects = () => {
     const smoothScroll = () => {
       const container = containerRef.current;
       if (!container) return;
-
+      isInteractingRef.current = false;
       container.scrollLeft += velocityRef.current * 5;
 
       velocityRef.current *= FRICTION;
@@ -46,6 +45,7 @@ const Projects = () => {
     if (!container) return;
 
     const startAutoScroll = () => {
+      isInteractingRef.current = false;
       if (autoScrollInterval.current) return;
       autoScrollInterval.current = setInterval(() => {
         if (!isInteractingRef.current) {
@@ -57,10 +57,11 @@ const Projects = () => {
             container.scrollLeft = 0;
           }
         }
-      }, 25);
+      }, 15);
     };
 
     const stopAutoScroll = () => {
+      isInteractingRef.current = true;
       clearInterval(autoScrollInterval.current);
       autoScrollInterval.current = null;
     };
@@ -88,6 +89,8 @@ const Projects = () => {
       lenis.options.wheelMultiplier = 0.01;
     };
 
+
+
     container.addEventListener("mouseenter", onEnter);
 
     return () => {
@@ -96,8 +99,10 @@ const Projects = () => {
     };
   }, []);
 
-  //KEY RIGHT AND LEFT MOVEMENT 
+  //KEYDOWN EVENT FOR LEFT/RIGHT ARROW
+
   useEffect(() => {
+
     const container = containerRef.current;
     const handleKeyDown = (e) => {
       if (!container) return;
@@ -108,11 +113,12 @@ const Projects = () => {
         velocityRef.current = 2;
         isInteractingRef.current = true;
       }
-    }
-    const handleKeyUp = (e) => {
+    };
+    const handleKeyUp = () => {
       velocityRef.current = 0;
-      isInteractingRef.current = false
+      isInteractingRef.current = false;
     }
+
 
     container.addEventListener("keydown", handleKeyDown);
     container.addEventListener("keyup", handleKeyUp);
@@ -120,6 +126,7 @@ const Projects = () => {
     return () => {
       container.removeEventListener("keydown", handleKeyDown);
       container.removeEventListener("keyup", handleKeyUp);
+
     }
   }, [])
   const handleUIDirections = (direction) => {
@@ -138,13 +145,14 @@ const Projects = () => {
 
 
   return (
+
     <section
-      id="projects"
       className="w-full h-full flex flex-col gap-10 items-center justify-center pt-[60px] px-[20px]"
     >
-      <div className="text-4xl font-bold px-15 pt-[60px] lg:pt-0">
-        My Latest Works
+      <div className="text-4xl font-bold px-15 pt-[60px] lg:pt-0 relative" >
+        Certifications
       </div>
+      {/* Overlay buttons */}
 
       <div
         ref={containerRef}
@@ -152,62 +160,35 @@ const Projects = () => {
       >
         <button
           onClick={() => handleUIDirections("left")}
-          className="hidden lg:block absolute  left-4  z-100"
+          className="hidden lg:block absolute left-4  z-100 "
         >
           <FaChevronLeft className="w-10 h-10 opacity-80 hover:opacity-100 bg-(--green) active:p-3 rounded-full p-2 transition-transform transform hover:scale-110 duration-100 text-gray-200 cursor-pointer" />
 
         </button>
-        {projects.map((project) => (
+        {certificates.map((certificate) => (
           <div
-            key={project.id}
-            className="flex justify-evenly h-[500px] flex-col border-2 border-gray-300  shrink-0 rounded-lg p-4 hover:scale-105 duration-300 w-100 max-w-full"
+            key={certificate.id}
+            className="flex justify-evenly h-[500px] flex-col border-2 border-gray-300 shrink-0 rounded-lg p-4 hover:scale-105 duration-300 w-100 max-w-full"
           >
             <a
-              href={project.live}
+              href={certificate.live}
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 "
             >
               <img
-                src={project.img}
-                alt={project.title}
+                src={certificate.img}
+                alt={certificate.title}
                 className="hover:flex object-contain rounded-lg border-1 border-(--green) hover:border-4 hover:scale-105 duration-300"
               />
             </a>
             <div>
 
-              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-gray-700 mb-2 sm:w-[100%]">
-                {project.description}
+              <h3 className="text-xl font-semibold mb-2">{certificate.title}</h3>
+              <p className="text-gray-500 mb-2 sm:w-[100%]">
+                {certificate.description}
               </p>
-              <div className="mb-2">
-                {project.tech.map((techItem, index) => (
-                  <span
-                    key={index}
-                    className="inline-block bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded-full mb-2 mr-2 hover:bg-blue-300 duration-200"
-                  >
-                    {techItem}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="flex space-x-4">
-              <a
-                href={project.live}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 hover:underline"
-              >
-                Live
-              </a>
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 hover:underline"
-              >
-                GitHub
-              </a>
+
             </div>
           </div>
         ))}
@@ -218,11 +199,12 @@ const Projects = () => {
         >
           <FaChevronRight className="w-10 h-10 opacity-80 hover:opacity-100 bg-(--green) active:p-3 rounded-full p-2 transition-transform transform hover:scale-110 duration-100 text-gray-200 cursor-pointer" />
 
+
         </button>
       </div>
-      <WorkStation />
     </section>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Certificates
+

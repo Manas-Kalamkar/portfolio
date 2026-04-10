@@ -10,7 +10,7 @@ const Hero = () => {
           I'm Manas
         </h2>
         <div className='text-xl lg:w-160'>
-          A passionate React Developer focused on building dynamic and interactive web applications.</div>
+          A passionate Web Developer focused on building dynamic and interactive web applications.</div>
       </div>
       <div className='flex justify-center items-start'>
         <img
