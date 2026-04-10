@@ -38,7 +38,7 @@ form{
   justify-content:center;
 }
 
-label,#submit{
+label,#submit,#downloadCV{
   font-size:1.4rem;
   font-weight:600
 }
@@ -50,7 +50,7 @@ input,textarea{
   font-size:1.3rem;
   font-weight:500;
   background-color:gray;
-  border-radius:0.2rem;
+  border-radius:0.1rem;
   color:var(--green);
   margin:auto;
 
@@ -68,11 +68,35 @@ label{
 }
 
 @media(min-width:500px){
-  input,textarea{width:400px;}
+  input,textarea{width:460px;}
 }
 @media(min-width:700px){
   input,textarea{width:600px;}
 }
 @media(min-width:1080px){
   input,textarea{width:700px;}
+}
+::-webkit-scrollbar{
+  display:none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar in IE, Edge, and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body.light {
+    background-color: rgb(229,231,235);
+    color: black;
+
+}
+
+body.dark {
+    background-color: rgb(18,18,18); /* dark background */
+    color: white; /* light text */
 }

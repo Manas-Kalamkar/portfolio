@@ -1,3 +1,12 @@
-import tailwindcss from 'tailwindcss';
-import 'lenis/dist/lenis.css'
+@import 'tailwindcss';
+@import 'lenis/dist/lenis.css'
+/* Hide scrollbar in Chrome, Safari, and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 
+/* Hide scrollbar in IE, Edge, and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
