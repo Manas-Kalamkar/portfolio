@@ -1,12 +1,58 @@
-# React + Vite
+# 🌐 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio built to showcase my projects, skills, and experience as a Frontend Developer.
 
-Currently, two official plugins are available:
+### 🚀 Live Demo: https://manas-kalamkar.github.io/portfolio/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 About the Project
 
-## Expanding the ESLint configuration
+This portfolio is designed to highlight my work in web development, focusing on clean UI, smooth user experience, and performance optimization.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+It serves as a central hub for:
+
+* Showcasing my projects
+* Demonstrating my frontend skills
+* Providing easy ways to connect with me
+
+## 🛠️ Tech Stack
+
+* **Frontend:** React.js, HTML5, CSS3
+* **Styling:** Tailwind CSS
+* **Tools:** Git, GitHub, lenis
+
+## ✨ Features
+
+* ⚡ Fully responsive design (mobile + desktop)
+* 🎯 Clean and modern UI
+* 📂 Project showcase with live demos & GitHub links
+* 📞 Contact section
+* 🚀 Optimized performance and fast loading
+
+## 📸 Screenshots
+
+<img width="375" height="667" alt="portfolio_mobile_hero_section" src="https://github.com/user-attachments/assets/6f265d55-120f-44d0-bfd7-eeb27f5feca9" />
+<img width="3072" height="1728" alt="portfolio_desktop_hero_section" src="https://github.com/user-attachments/assets/ba901728-7391-4b21-a5b9-aae71b350d90" />
+
+
+## 🧠 What I Learned
+
+* Building scalable React components
+* Improving UI/UX design skills
+* Optimizing performance and responsiveness
+* Structuring real-world frontend projects
+
+## 🔮 Future Improvements
+
+* Add animations using Framer Motion
+* Add blog section
+* Improve SEO (meta tags, structured data)
+
+## 🤝 Connect With Me
+
+* LinkedIn: https://www.linkedin.com/in/manas-kalamkar/
+* GitHub: https://github.com/Manas-Kalamkar/portfolio
+* Email: itsmanas.codes@gmail.com
+
+---
+
+⭐ If you like this project, consider giving it a star!
