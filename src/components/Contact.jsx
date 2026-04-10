@@ -1,5 +1,9 @@
 import React from 'react';
 import Footer from './Footer';
+const access_key = import.meta.env.VITE_MY_ACCESS_KEY
+const api_url = import.meta.env.VITE_API_URL
+
+console.log(access_key)
 
 const Contact = () => {
   const [result, setResult] = React.useState("");
@@ -9,10 +13,10 @@ const Contact = () => {
     setResult("Sending...");
 
     const formData = new FormData(event.target);
-    formData.append("access_key", "ed510341-3320-44a1-bebb-1a2c22c9e3d8");
+    formData.append("access_key", access_key);
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch(api_url, {
         method: "POST",
         body: formData
       });
