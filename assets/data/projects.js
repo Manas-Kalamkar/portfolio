@@ -5,8 +5,8 @@ export const projects = [
     title: "Clicker Game",
     description: "An interactive game using Event-Driven Programming, with a custom game loop to track scores in real-time. Optimized for mobile devices with Touch Events for a seamless experience.",
     tech: ["JavaScript", "CSS", "HTML"],
-    live: "https://manas-kalamkar.github.io/Clicker/",
-    github: "https://github.com/Manas-Kalamkar/Clicker",
+    live: "https://manas-kalamkar.github.io/clicker/",
+    github: "https://github.com/Manas-Kalamkar/clicker",
     img: "./assets/data/images/projects/clicker.webp"
   },
   {
@@ -14,8 +14,8 @@ export const projects = [
     title: "Stopwatch",
     description: "A high-precision timer built with Vanilla JavaScript, utilizing efficient DOM manipulation and setInterval for smooth Start, Stop, and Lap functions with zero latency.",
     tech: ["CSS", "JavaScript", "HTML"],
-    live: " https://manas-kalamkar.github.io/project_3_stopwatch/",
-    github: "https://github.com/Manas-Kalamkar/project_3_stopwatch",
+    live: " https://manas-kalamkar.github.io/stopwatch/",
+    github: "https://github.com/Manas-Kalamkar/stopwatch/",
     img: "./assets/data/images/projects/stopwatch.webp"
   },
   {
@@ -23,8 +23,8 @@ export const projects = [
     title: "Todo App",
     description: "A dynamic task management app with full CRUD functionality, built with JavaScript and CSS3. Uses event delegation and local storage for persistent user data across sessions.",
     tech: ["CSS", "JavaScript", "HTML"],
-    live: "https://manas-kalamkar.github.io/project_2_todo/",
-    github: "https://github.com/Manas-Kalamkar/project_2_todo",
+    live: "https://manas-kalamkar.github.io/todo/",
+    github: "https://github.com/Manas-Kalamkar/todo",
     img: "./assets/data/images/projects/todo.webp"
   },
   {
@@ -32,8 +32,8 @@ export const projects = [
     title: "Responsive Portfolio Website",
     description: "A modern, responsive portfolio site developed with React and Tailwind CSS, featuring a flexible grid layout, smooth navigation, and semantic HTML5 for SEO and accessibility.",
     tech: ["HTML", "CSS"],
-    live: "https://manas-kalamkar.github.io/project_1_responsive_design/",
-    github: "https://github.com/Manas-Kalamkar/project_1_responsive_design",
+    live: "https://manas-kalamkar.github.io/responsive-web-design/",
+    github: "https://github.com/Manas-Kalamkar/responsive-web-design",
     img: "./assets/data/images/projects/responsive.webp"
   },
   {
@@ -41,8 +41,8 @@ export const projects = [
     title: "Weather App",
     description: "A responsive weather dashboard built with React and Tailwind CSS, integrating OpenWeatherMap API to fetch real-time climate and air quality data for a seamless user experience.",
     tech: ["React", "Tailwindcss"],
-    live: "https://manas-kalamkar.github.io/project_5_weather_react_app/",
-    github: "https://github.com/Manas-Kalamkar/project_5_weather_react_app",
+    live: "https://manas-kalamkar.github.io/react-weather-app/",
+    github: "https://github.com/Manas-Kalamkar/react-weather-app",
     img: "./assets/data/images/projects/weather.webp"
   },
   {
