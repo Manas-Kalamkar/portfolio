@@ -15,9 +15,14 @@ const Hero = () => {
       <div className='flex justify-center items-start'>
         <img
           src={myPhoto}
-          alt="myPhoto"
-          className='object-cover h-80 lg:h-120'
-          style={{ filter: 'drop-shadow(60px 0px 0px #10B981) drop-shadow(-60px 0px 0px #10B001)' }}
+          alt="glow"
+          className="absolute h-80 lg:h-120 blur-3xl opacity-90"
+        />
+
+        <img
+          src={myPhoto}
+          alt="main"
+          className="relative h-80 lg:h-120 fade-img"
         />
       </div>
 
