@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import 'lenis/dist/lenis.css'
+@import 'lenis/dist/lenis.css';
 /* Hide scrollbar in Chrome, Safari, and Opera */
 .no-scrollbar::-webkit-scrollbar {
   display: none;

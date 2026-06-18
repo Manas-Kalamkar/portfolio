@@ -33,10 +33,6 @@ html.lenis body {
   transition-behavior: allow-discrete;
 }
 
-form{
-  display:flex;
-  justify-content:center;
-}
 
 label,#submit,#downloadCV{
   font-size:1.4rem;
@@ -45,37 +41,22 @@ label,#submit,#downloadCV{
 
 
 input,textarea{
-  width:100%;
-  padding:10px ;
+  padding:10px;
   font-size:1.3rem;
   font-weight:500;
   background-color:gray;
   border-radius:0.1rem;
   color:var(--green);
-  margin:auto;
-
 }
 
 input,textarea::placeholder{
   font-style: italic;
-  
 }
-
 
 label{
   display:flex;
-
 }
 
-@media(min-width:500px){
-  input,textarea{width:460px;}
-}
-@media(min-width:700px){
-  input,textarea{width:600px;}
-}
-@media(min-width:1080px){
-  input,textarea{width:700px;}
-}
 ::-webkit-scrollbar{
   display:none;
 }

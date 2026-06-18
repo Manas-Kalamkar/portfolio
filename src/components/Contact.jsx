@@ -24,7 +24,7 @@ const Contact = () => {
       const data = await response.json();
 
       if (data.success) {
-        setResult("Form Submitted Successfully.");
+        setResult("Uhmm... I got your message. I'll get back to you as soon as possible.");
         event.target.reset();
       } else {
         setResult("Error: " + data.message);
@@ -47,7 +47,7 @@ const Contact = () => {
       <div id='form' className="w-full">
         <form
           onSubmit={onSubmit}
-          className='flex flex-col gap-4 w-full'
+          className='flex flex-col gap-4 w-full max-w-[700px] mx-auto'
         >
           {/* Name */}
           <div className="flex flex-col w-full">
@@ -86,9 +86,9 @@ const Contact = () => {
           </div>
 
           {/* Buttons */}
-          <div className='flex flex-col sm:flex-row gap-4 w-full mt-4 justify-center md:flex-row'>
+          <div className='flex flex-col sm:flex-row gap-4 w-full mt-4 justify-center md:flex-row items-center'>
             <button
-              className='bg-(--green) font-bold w-full sm:w-auto px-16 py-3 rounded-sm hover:bg-gray-400 hover:text-gray-100 transition-all duration-300 hover:rounded-4xl '
+              className='bg-[var(--green)] font-bold w-full sm:w-auto px-16 py-3 rounded-sm hover:bg-gray-400 hover:text-gray-100 transition-all duration-300 hover:rounded-4xl '
               type='submit'
             >
               Let's Connect
@@ -97,15 +97,15 @@ const Contact = () => {
             <a
               target='_blank'
               rel="noreferrer"
-              href='https://drive.google.com/file/d/1R8Nm4XwAh9VzH1uzgCYWo_B8dFRDd6Hi/view?usp=sharing'
-              className='bg-(--green) text-center font-bold w-full sm:w-auto px-16 py-3 rounded-sm hover:bg-gray-400 hover:text-gray-100 transition-all duration-300 hover:rounded-4xl '
+              href='https://drive.google.com/file/d/1v6m8YQ2iQIXADGzc-hd0q5jfzj03SuAQ/view?usp=sharing'
+              className='bg-[var(--green)] text-center font-bold w-full sm:w-auto px-16 py-3 rounded-sm hover:bg-gray-400 hover:text-gray-100 transition-all duration-300 hover:rounded-4xl '
             >
               Download CV
             </a>
           </div>
 
           {/* RESULT */}
-          <span className="mt-3 text-center sm:text-left">{result}</span>
+          <span className="mt-3 text-center sm:text-center">{result}</span>
         </form>
       </div>
 
