@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from './Footer';
-const access_key = import.meta.env.VITE_MY_ACCESS_KEY
-const api_url = import.meta.env.VITE_API_URL
+const access_key = VITE_MY_ACCESS_KEY
+const api_url = VITE_API_URL
 
 console.log(access_key)
 
