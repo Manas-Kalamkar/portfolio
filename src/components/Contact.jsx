@@ -3,7 +3,6 @@ import Footer from './Footer';
 const access_key = VITE_MY_ACCESS_KEY
 const api_url = VITE_API_URL
 
-console.log(access_key)
 
 const Contact = () => {
   const [result, setResult] = React.useState("");
