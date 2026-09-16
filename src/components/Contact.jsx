@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from './Footer';
-const access_key = VITE_MY_ACCESS_KEY
-const api_url = VITE_API_URL
+const access_key = import.meta.env.VITE_MY_ACCESS_KEY
+const api_url = import.meta.env.VITE_API_URL
 
 
 const Contact = () => {
@@ -96,10 +96,10 @@ const Contact = () => {
             <a
               target='_blank'
               rel="noreferrer"
-              href='https://drive.google.com/file/d/1v6m8YQ2iQIXADGzc-hd0q5jfzj03SuAQ/view?usp=sharing'
+              href='https://drive.google.com/file/d/1W1O9LUSIplCS6b5a7G2RDrbae5fOh97O/preview'
               className='bg-[var(--green)] text-center font-bold w-full sm:w-auto px-16 py-3 rounded-sm hover:bg-gray-400 hover:text-gray-100 transition-all duration-300 hover:rounded-4xl '
             >
-              Download CV
+              View Résumé
             </a>
           </div>
 
