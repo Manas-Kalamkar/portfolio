@@ -96,7 +96,7 @@ const Contact = () => {
             <a
               target='_blank'
               rel="noreferrer"
-              href='https://drive.google.com/file/d/1W1O9LUSIplCS6b5a7G2RDrbae5fOh97O/preview'
+              href='https://drive.google.com/file/d/1r6f6v8oNjci8d4AA-HcKeetu34BXIP0Q/preview'
               className='bg-[var(--green)] text-center font-bold w-full sm:w-auto px-16 py-3 rounded-sm hover:bg-gray-400 hover:text-gray-100 transition-all duration-300 hover:rounded-4xl '
             >
               View Résumé
